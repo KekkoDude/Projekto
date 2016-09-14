@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var pSpeed = 1;
-var facing;
+            <string>pSpeed = 3;
+facing = 0;
 
 instance_create(self.x,self.y,obj_pBody);
 image_speed = 0.1;
@@ -119,25 +119,73 @@ if direction &lt; 337.5 &amp;&amp; direction &gt; 292.5 {
             <kind>1</kind>
             <string>if keyboard_check(ord("W")){
     if facing == 1 {
-        self.x += 2
+        self.x += pSpeed
     }else if facing == 2{
-        self.x += 1.5
-        self.y -= 1.5
+        self.x += pSpeed/1.13
+        self.y -= pSpeed/1.13
     }else if facing == 3{
-        self.y -= 2
+        self.y -= pSpeed
     }else if facing == 4{
-        self.x -= 1.5
-        self.y -= 1.5
+        self.x -= pSpeed/1.13
+        self.y -= pSpeed/1.13
     }else if facing == 5{
-        self.x -= 2
+        self.x -= pSpeed
     }else if facing == 6{
-        self.x -= 1.5
-        self.y += 1.5
+        self.x -= pSpeed/1.13
+        self.y += pSpeed/1.13
     }else if facing == 7{
-        self.y += 2
+        self.y += pSpeed
     }else if facing == 8{
-        self.x += 1.5
-        self.y += 1.5
+        self.x += pSpeed/1.13
+        self.y += pSpeed/1.13
+    }
+}
+
+if keyboard_check(ord("A")){
+    if facing == 1 {
+       self.y -= pSpeed
+    }else if facing == 2{
+        self.x -= pSpeed/1.13
+        self.y -= pSpeed/1.13
+    }else if facing == 3{
+        self.x -= pSpeed
+    }else if facing == 4{
+        self.x -= pSpeed/1.13
+        self.y += pSpeed/1.13
+    }else if facing == 5{
+        self.y += pSpeed
+    }else if facing == 6{
+        self.x += pSpeed/1.13
+        self.y += pSpeed/1.13
+    }else if facing == 7{
+        self.x += pSpeed
+    }else if facing == 8{
+        self.x += pSpeed/1.13
+        self.y -= pSpeed/1.13
+    }
+}
+
+if keyboard_check(ord("D")){
+    if facing == 1 {
+       self.y += pSpeed
+    }else if facing == 2{
+        self.x += pSpeed/1.13
+        self.y += pSpeed/1.13
+    }else if facing == 3{
+        self.x += pSpeed
+    }else if facing == 4{
+        self.x += pSpeed/1.13
+        self.y -= pSpeed/1.13
+    }else if facing == 5{
+        self.y -= pSpeed
+    }else if facing == 6{
+        self.x -= pSpeed/1.13
+        self.y -= pSpeed/1.13
+    }else if facing == 7{
+        self.x -= pSpeed
+    }else if facing == 8{
+        self.x -= pSpeed/1.13
+        self.y += pSpeed/1.13
     }
 }
 </string>
