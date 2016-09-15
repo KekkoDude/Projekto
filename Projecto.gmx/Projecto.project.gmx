@@ -8,7 +8,12 @@
   <sprites name="sprites">
     <sprite>sprites\sprite1</sprite>
     <sprite>sprites\sprite2</sprite>
+<<<<<<< HEAD
+    <sprite>sprites\spr_wall</sprite>
+    <sprite>sprites\spr_door</sprite>
+=======
     <sprite>sprites\spr_arrow</sprite>
+>>>>>>> refs/remotes/origin/master
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -22,11 +27,21 @@
     <object>objects\obj_plegs</object>
     <object>objects\obj_pBody</object>
     <object>objects\debug</object>
+<<<<<<< HEAD
+    <objects name="collideables">
+      <object>objects\obj_wall</object>
+      <object>objects\obj_door</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_testArea</room>
+=======
     <object>objects\obj_menu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
     <room>rooms\room1</room>
+>>>>>>> refs/remotes/origin/master
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
