@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>pSpeed = 3;
+pSpeedMkey = pSpeed/1.13
 facing = 0;
 
 instance_create(self.x,self.y,obj_pBody);
@@ -119,75 +120,124 @@ if direction &lt; 337.5 &amp;&amp; direction &gt; 292.5 {
             <kind>1</kind>
             <string>//player Movement
 
+
 if keyboard_check(ord("W")){
     if facing == 1 {
-        self.x += pSpeed
+        if place_free(self.x + pSpeed, self.y){
+            self.x += pSpeed
+        }
     }else if facing == 2{
-        self.x += pSpeed/1.13
-        self.y -= pSpeed/1.13
+        if place_free(self.x + pSpeed/1.13, self.y - pSpeed/1.13){
+            self.x += pSpeed/1.13
+            self.y -= pSpeed/1.13
+        }
     }else if facing == 3{
-        self.y -= pSpeed
+        if place_free(self.x, self.y - pSpeed){
+            self.y -= pSpeed
+        }
     }else if facing == 4{
-        self.x -= pSpeed/1.13
-        self.y -= pSpeed/1.13
+        if place_free(self.x - pSpeed/1.13, self.y - pSpeed/1.13){
+            self.x -= pSpeed/1.13
+            self.y -= pSpeed/1.13
+        }
     }else if facing == 5{
-        self.x -= pSpeed
+        if place_free(self.x - pSpeed, self.y){
+            self.x -= pSpeed
+        }
     }else if facing == 6{
-        self.x -= pSpeed/1.13
-        self.y += pSpeed/1.13
+        if place_free(self.x - pSpeed/1.13, self.y + pSpeed/1.13){
+            self.x -= pSpeed/1.13
+            self.y += pSpeed/1.13
+        }
     }else if facing == 7{
+    if place_free(self.x, self.y + pSpeed){
         self.y += pSpeed
+        }
     }else if facing == 8{
-        self.x += pSpeed/1.13
-        self.y += pSpeed/1.13
+        if place_free(self.x + pSpeed/1.13, self.y + pSpeed/1.13){
+            self.x += pSpeed/1.13
+            self.y += pSpeed/1.13
+            }
     }
 }
 
 if keyboard_check(ord("A")){
     if facing == 1 {
-       self.y -= pSpeed
+        if place_free(self.x, self.y - pSpeed){
+            self.y -= pSpeed
+        }
     }else if facing == 2{
-        self.x -= pSpeed/1.13
-        self.y -= pSpeed/1.13
+        if place_free(self.x - pSpeed/1.13, self.y - pSpeed/1.13){
+            self.x -= pSpeed/1.13
+            self.y -= pSpeed/1.13
+        }
     }else if facing == 3{
-        self.x -= pSpeed
+        if place_free(self.x - pSpeed, self.y){
+            self.x -= pSpeed
+        }
     }else if facing == 4{
-        self.x -= pSpeed/1.13
-        self.y += pSpeed/1.13
+        if place_free(self.x - pSpeed/1.13, self.y + pSpeed/1.13){
+            self.x -= pSpeed/1.13
+            self.y += pSpeed/1.13
+        }
     }else if facing == 5{
-        self.y += pSpeed
+        if place_free(self.x, self.y + pSpeed){
+            self.y += pSpeed
+        }
     }else if facing == 6{
-        self.x += pSpeed/1.13
-        self.y += pSpeed/1.13
+        if place_free(self.x + pSpeed/1.13, self.y + pSpeed/1.13){
+            self.x += pSpeed/1.13
+            self.y += pSpeed/1.13
+        }
     }else if facing == 7{
-        self.x += pSpeed
+        if place_free(self.x + pSpeed, self.y){
+            self.x += pSpeed
+        }
     }else if facing == 8{
-        self.x += pSpeed/1.13
-        self.y -= pSpeed/1.13
+        if place_free(self.x + pSpeed/1.13, self.y - pSpeed/1.13){
+            self.x += pSpeed/1.13
+            self.y -= pSpeed/1.13
+        }
     }
 }
 
 if keyboard_check(ord("D")){
     if facing == 1 {
-       self.y += pSpeed
+        if place_free(self.x, self.y + pSpeed){
+            self.y += pSpeed
+        }
     }else if facing == 2{
-        self.x += pSpeed/1.13
-        self.y += pSpeed/1.13
+        if place_free(self.x + pSpeed/1.13, self.y + pSpeed/1.13){
+            self.x += pSpeed/1.13
+            self.y += pSpeed/1.13
+        }
     }else if facing == 3{
-        self.x += pSpeed
+        if place_free(self.x + pSpeed, self.y){
+            self.x += pSpeed
+        }
     }else if facing == 4{
-        self.x += pSpeed/1.13
-        self.y -= pSpeed/1.13
+        if place_free(self.x + pSpeed/1.13, self.y - pSpeed/1.13){
+            self.x += pSpeed/1.13
+            self.y -= pSpeed/1.13
+        }
     }else if facing == 5{
-        self.y -= pSpeed
+        if place_free(self.x, self.y - pSpeed){
+            self.y -= pSpeed
+        }
     }else if facing == 6{
-        self.x -= pSpeed/1.13
-        self.y -= pSpeed/1.13
+        if place_free(self.x - pSpeed/1.13, self.y - pSpeed/1.13){
+            self.x -= pSpeed/1.13
+            self.y -= pSpeed/1.13
+        }
     }else if facing == 7{
-        self.x -= pSpeed
+        if place_free(self.x - pSpeed, self.y){
+            self.x -= pSpeed
+        }
     }else if facing == 8{
-        self.x -= pSpeed/1.13
-        self.y += pSpeed/1.13
+        if place_free(self.x - pSpeed/1.13, self.y + pSpeed/1.13){
+            self.x -= pSpeed/1.13
+            self.y += pSpeed/1.13
+        }
     }
 }
 </string>
