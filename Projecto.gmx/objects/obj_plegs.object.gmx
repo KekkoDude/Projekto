@@ -117,7 +117,9 @@ if direction &lt; 337.5 &amp;&amp; direction &gt; 292.5 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check(ord("W")){
+            <string>//player Movement
+
+if keyboard_check(ord("W")){
     if facing == 1 {
         self.x += pSpeed
     }else if facing == 2{
